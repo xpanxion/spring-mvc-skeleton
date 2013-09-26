@@ -1,0 +1,15 @@
+apply plugin: 'java'
+apply plugin: 'war'
+apply plugin: 'eclipse-wtp'
+
+sourceCompatibility = 1.7
+version ='0.1'
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	testCompile 'junit:junit:4.+'
+	compile 'org.springframework:spring-webmvc:3.2.4.RELEASE'
+}
