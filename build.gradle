@@ -1,6 +1,16 @@
+//build plugins
 apply plugin: 'java'
 apply plugin: 'war'
+//ide plugins
 apply plugin: 'eclipse-wtp'
+apply plugin: 'jetty'
+
+//reporting and quality plugins
+apply plugin: 'findbugs'
+apply plugin: 'checkstyle'
+apply plugin: 'pmd'
+apply plugin: 'jdepend'
+apply plugin: 'jacoco'
 
 sourceCompatibility = 1.7
 version ='0.1'
@@ -13,3 +23,23 @@ dependencies {
 	testCompile 'junit:junit:4.+'
 	compile 'org.springframework:spring-webmvc:3.2.4.RELEASE'
 }
+
+//plugin configurations
+findbugs {
+	effort='max'
+	includeFilter = file("$rootProject.projectDir/config/findbugs/findbugs.xml")
+}
+
+pmd {
+	ruleSetFiles = files("$rootProject.projectDir/config/pmd/pmd.xml")
+}
+
+
+jacocoTestReport{
+	reports {
+		html.enabled true
+		xml.enabled true	
+	}
+		
+}
+
