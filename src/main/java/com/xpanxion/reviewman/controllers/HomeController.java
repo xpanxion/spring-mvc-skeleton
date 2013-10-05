@@ -16,8 +16,7 @@ public class HomeController {
 
 	@RequestMapping("**/home")
 	public ModelAndView getHomePage(){
-		ModelAndView mAndV = new ModelAndView("home");
-		return mAndV;
+		return new ModelAndView("home");
 	}
 	
 }
