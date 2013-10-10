@@ -19,4 +19,6 @@
             <value>.jsp</value>
          </property>
     </bean>
+    
+    <import resource="hibernate.xml"/>
 </beans>
