@@ -30,4 +30,9 @@
 	<bean id="txManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
   		<property name="dataSource" ref="dataSource"/>
   	</bean>
+  	
+  	<bean id="liquidbase" class="liquibase.integration.spring.SpringLiquibase">
+  		    <property name="dataSource" ref="dataSource" />
+      		<property name="changeLog" value="classpath:com/xpanxion/reviewman/db/changelog/master.xml" />
+  	</bean>
 </beans>

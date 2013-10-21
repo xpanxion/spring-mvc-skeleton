@@ -14,11 +14,6 @@ public class TestDaoImpl implements TestDao {
 
     private SessionFactory sessionFactory;
 
-    /*
-     * (non-Javadoc)
-     * 
-     * @see com.xpanxion.reviewman.dao.TestDao#getAllItems()
-     */
     @Override
     @SuppressWarnings("unchecked")
     public List<TestEntity> getAllItems() {

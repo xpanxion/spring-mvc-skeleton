@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<databaseChangeLog 
+  xmlns="http://www.liquibase.org/xml/ns/dbchangelog/1.9" 
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+  xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog/1.9
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-1.9.xsd"> 
+                    
+	<changeSet author="Brian Smith" id="create-test-table-with-data">
+		<createTable tableName="test">
+			<column name="id" type="integer" autoIncrement="true">
+				<constraints primaryKey="true"/>
+			</column>
+			<column name="value" type="text"/>
+		</createTable>
+		<insert tableName="test">
+			<column name="value" value="Test One"/>
+		</insert>
+		<insert tableName="test">
+			<column name="value" value="Yep It Works"/>
+		</insert>
+	</changeSet>                    
+</databaseChangeLog>

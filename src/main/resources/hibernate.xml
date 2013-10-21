@@ -8,9 +8,9 @@
         
         <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
         	<property name="driverClassName" value="org.postgresql.Driver"/>
-        	<property name="password" value="postgres"/>
+        	<property name="password" value="test"/>
         	<property name="url" value="jdbc:postgresql://localhost:5432/test"/>
-        	<property name="username" value="postgres" />
+        	<property name="username" value="testuser" />
         </bean>
 
  <bean id="sessionFactory" class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">

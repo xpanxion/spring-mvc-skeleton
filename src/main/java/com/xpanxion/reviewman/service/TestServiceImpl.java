@@ -19,11 +19,6 @@ public class TestServiceImpl implements TestService {
 
     private TestDao testDao;
 
-    /*
-     * (non-Javadoc)
-     * 
-     * @see com.xpanxion.reviewman.service.TestService#getTestBeans()
-     */
     @Override
     public List<TestBean> getTestBeans() {
         List<TestEntity> testItems = this.testDao.getAllItems();
@@ -31,6 +26,7 @@ public class TestServiceImpl implements TestService {
         for (TestEntity entity : testItems) {
             TestBean bean = new TestBean();
             BeanUtils.copyProperties(entity, bean);
+            bean.setText(entity.getValue());
             output.add(bean);
 
         }

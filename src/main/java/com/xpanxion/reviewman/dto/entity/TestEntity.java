@@ -13,7 +13,7 @@ import javax.persistence.Table;
 public class TestEntity {
 
     private long id;
-    private String text;
+    private String value;
 
     /**
      * @return the id
@@ -27,9 +27,9 @@ public class TestEntity {
     /**
      * @return the text
      */
-    @Column(name = "test")
-    public String getText() {
-        return this.text;
+    @Column
+    public String getValue() {
+        return this.value;
     }
 
     /**
@@ -44,7 +44,7 @@ public class TestEntity {
      * @param text
      *            the text to set
      */
-    public void setText(String text) {
-        this.text = text;
+    public void setValue(String value) {
+        this.value = value;
     }
 }
