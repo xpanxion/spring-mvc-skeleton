@@ -12,6 +12,7 @@ apply plugin: 'pmd'
 apply plugin: 'jdepend'
 apply plugin: 'jacoco'
 
+
 sourceCompatibility = 1.7
 version ='0.1'
 
@@ -22,6 +23,14 @@ repositories {
 dependencies {
 	testCompile 'junit:junit:4.+'
 	compile 'org.springframework:spring-webmvc:3.2.4.RELEASE'
+    compile 'org.springframework:spring-orm:3.2.4.RELEASE'
+    compile 'org.hibernate:hibernate-core:4.2.6.Final'
+    compile 'commons-dbcp:commons-dbcp:1.4'
+    compile 'org.hibernate:hibernate-ehcache:4.2.6.Final'
+    runtime 'postgresql:postgresql:9.1-901.jdbc4'
+    testCompile 'org.mockito:mockito-all:1.9.5'
+    compile 'javax.servlet:jstl:1.2'
+    compile 'org.liquibase:liquibase-core:3.0.5'
 }
 
 //plugin configurations
@@ -31,6 +40,7 @@ findbugs {
 }
 
 pmd {
+	sourceSets = [sourceSets.main]
 	ruleSetFiles = files("$rootProject.projectDir/config/pmd/pmd.xml")
 }
 
