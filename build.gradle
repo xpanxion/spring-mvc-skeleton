@@ -31,6 +31,7 @@ dependencies {
     testCompile 'org.mockito:mockito-all:1.9.5'
     compile 'javax.servlet:jstl:1.2'
     compile 'org.liquibase:liquibase-core:3.0.5'
+    providedCompile 'org.apache.tomcat:tomcat-servlet-api:7.0.42'
 }
 
 //plugin configurations

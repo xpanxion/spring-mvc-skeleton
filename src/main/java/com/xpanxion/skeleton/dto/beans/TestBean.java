@@ -1,4 +1,4 @@
-package com.xpanxion.reviewman.dto.beans;
+package com.xpanxion.skeleton.dto.beans;
 
 public class TestBean {
 

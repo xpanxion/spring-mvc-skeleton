@@ -1,4 +1,4 @@
-package com.xpanxion.reviewman.dao;
+package com.xpanxion.skeleton.dao;
 
 import java.util.List;
 
@@ -7,7 +7,7 @@ import javax.annotation.Resource;
 import org.hibernate.SessionFactory;
 import org.springframework.stereotype.Repository;
 
-import com.xpanxion.reviewman.dto.entity.TestEntity;
+import com.xpanxion.skeleton.dto.entity.TestEntity;
 
 @Repository
 public class TestDaoImpl implements TestDao {

@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.xpanxion.reviewman.dao;
+package com.xpanxion.skeleton.dao;
 
 import static org.mockito.BDDMockito.given;
 import static org.mockito.Mockito.mock;
@@ -19,7 +19,8 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.runners.MockitoJUnitRunner;
 
-import com.xpanxion.reviewman.dto.entity.TestEntity;
+import com.xpanxion.skeleton.dao.TestDaoImpl;
+import com.xpanxion.skeleton.dto.entity.TestEntity;
 
 /**
  * @author brian
@@ -35,7 +36,7 @@ public class TestDaoImplTest {
     private SessionFactory factory;
 
     /**
-     * Test method for {@link com.xpanxion.reviewman.dao.TestDaoImpl#getAllItems()}.
+     * Test method for {@link com.xpanxion.skeleton.dao.TestDaoImpl#getAllItems()}.
      */
     @Test
     public void testGetAllItems() {

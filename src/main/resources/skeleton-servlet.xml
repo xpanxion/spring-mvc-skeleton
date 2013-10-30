@@ -12,7 +12,7 @@
         http://www.springframework.org/schema/context
         http://www.springframework.org/schema/context/spring-context.xsd">
 
-    <context:component-scan base-package="com.xpanxion.reviewman"/>
+    <context:component-scan base-package="com.xpanxion.skeleton"/>
 
     <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver" >
          <property name="prefix">
@@ -33,6 +33,6 @@
   	
   	<bean id="liquidbase" class="liquibase.integration.spring.SpringLiquibase">
   		    <property name="dataSource" ref="dataSource" />
-      		<property name="changeLog" value="classpath:com/xpanxion/reviewman/db/changelog/master.xml" />
+      		<property name="changeLog" value="classpath:com/xpanxion/skeleton/db/changelog/master.xml" />
   	</bean>
 </beans>

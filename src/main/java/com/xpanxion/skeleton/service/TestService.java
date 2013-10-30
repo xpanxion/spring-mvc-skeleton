@@ -1,8 +1,8 @@
-package com.xpanxion.reviewman.service;
+package com.xpanxion.skeleton.service;
 
 import java.util.List;
 
-import com.xpanxion.reviewman.dto.beans.TestBean;
+import com.xpanxion.skeleton.dto.beans.TestBean;
 
 public interface TestService {
 

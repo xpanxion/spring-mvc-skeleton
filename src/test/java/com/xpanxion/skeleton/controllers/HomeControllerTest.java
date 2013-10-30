@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.xpanxion.reviewman.controllers;
+package com.xpanxion.skeleton.controllers;
 
 import org.junit.Assert;
 import org.junit.Test;
@@ -11,7 +11,8 @@ import org.mockito.Mock;
 import org.mockito.runners.MockitoJUnitRunner;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.xpanxion.reviewman.service.TestService;
+import com.xpanxion.skeleton.controllers.HomeController;
+import com.xpanxion.skeleton.service.TestService;
 
 /**
  * @author brian
@@ -26,7 +27,7 @@ public class HomeControllerTest {
     private TestService testService;
 
     /**
-     * Test method for {@link com.xpanxion.reviewman.controllers.HomeController#getHomePage()}.
+     * Test method for {@link com.xpanxion.skeleton.controllers.HomeController#getHomePage()}.
      */
     @Test
     public void testGetHomePage() {

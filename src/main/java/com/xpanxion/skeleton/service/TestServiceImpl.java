@@ -1,4 +1,4 @@
-package com.xpanxion.reviewman.service;
+package com.xpanxion.skeleton.service;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -9,9 +9,9 @@ import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.xpanxion.reviewman.dao.TestDao;
-import com.xpanxion.reviewman.dto.beans.TestBean;
-import com.xpanxion.reviewman.dto.entity.TestEntity;
+import com.xpanxion.skeleton.dao.TestDao;
+import com.xpanxion.skeleton.dto.beans.TestBean;
+import com.xpanxion.skeleton.dto.entity.TestEntity;
 
 @Transactional
 @Service

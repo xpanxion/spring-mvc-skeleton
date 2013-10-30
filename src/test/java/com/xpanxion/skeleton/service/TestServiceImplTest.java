@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.xpanxion.reviewman.service;
+package com.xpanxion.skeleton.service;
 
 import static org.mockito.BDDMockito.given;
 
@@ -15,9 +15,10 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.runners.MockitoJUnitRunner;
 
-import com.xpanxion.reviewman.dao.TestDao;
-import com.xpanxion.reviewman.dto.beans.TestBean;
-import com.xpanxion.reviewman.dto.entity.TestEntity;
+import com.xpanxion.skeleton.dao.TestDao;
+import com.xpanxion.skeleton.dto.beans.TestBean;
+import com.xpanxion.skeleton.dto.entity.TestEntity;
+import com.xpanxion.skeleton.service.TestServiceImpl;
 
 /**
  * @author brian
@@ -33,7 +34,7 @@ public class TestServiceImplTest {
     private TestDao testDao;
 
     /**
-     * Test method for {@link com.xpanxion.reviewman.service.TestServiceImpl#getTestBeans()}.
+     * Test method for {@link com.xpanxion.skeleton.service.TestServiceImpl#getTestBeans()}.
      */
     @Test
     public void testGetTestBeans() {

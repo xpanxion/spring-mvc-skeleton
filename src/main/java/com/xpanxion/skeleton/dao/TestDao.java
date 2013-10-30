@@ -1,8 +1,8 @@
-package com.xpanxion.reviewman.dao;
+package com.xpanxion.skeleton.dao;
 
 import java.util.List;
 
-import com.xpanxion.reviewman.dto.entity.TestEntity;
+import com.xpanxion.skeleton.dto.entity.TestEntity;
 
 public interface TestDao {
 

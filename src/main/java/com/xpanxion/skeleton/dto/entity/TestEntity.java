@@ -1,4 +1,4 @@
-package com.xpanxion.reviewman.dto.entity;
+package com.xpanxion.skeleton.dto.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
