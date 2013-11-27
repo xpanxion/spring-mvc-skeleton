@@ -3,7 +3,6 @@ apply plugin: 'java'
 apply plugin: 'war'
 //ide plugins
 apply plugin: 'eclipse-wtp'
-apply plugin: 'jetty'
 
 //reporting and quality plugins
 apply plugin: 'findbugs'
@@ -34,6 +33,10 @@ dependencies {
     providedCompile 'org.apache.tomcat:tomcat-servlet-api:7.0.42'
 }
 
+checkstyle {
+	ignoreFailures=false
+}
+
 //plugin configurations
 findbugs {
 	effort='max'
@@ -52,5 +55,18 @@ jacocoTestReport{
 		xml.enabled true	
 	}
 		
+}
+
+if (project.hasProperty('dontFailAnalysis')) {
+	findbugs {
+		    ignoreFailures=true
+	}
+	
+	pmd {
+		ignoreFailures=true
+	}
+	checkstyle{
+		ignoreFailures =true
+	}
 }
 
