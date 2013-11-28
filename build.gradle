@@ -8,7 +8,6 @@ apply plugin: 'eclipse-wtp'
 apply plugin: 'findbugs'
 apply plugin: 'checkstyle'
 apply plugin: 'pmd'
-apply plugin: 'jdepend'
 apply plugin: 'jacoco'
 
 
