@@ -1,15 +1,8 @@
-//build plugins
 apply plugin: 'java'
 apply plugin: 'war'
-//ide plugins
 apply plugin: 'eclipse-wtp'
-
-//reporting and quality plugins
-apply plugin: 'findbugs'
-apply plugin: 'checkstyle'
-apply plugin: 'pmd'
+apply plugin: 'sonar-runner'
 apply plugin: 'jacoco'
-
 
 sourceCompatibility = 1.7
 version ='0.1'
@@ -31,41 +24,3 @@ dependencies {
     compile 'org.liquibase:liquibase-core:3.0.5'
     providedCompile 'org.apache.tomcat:tomcat-servlet-api:7.0.42'
 }
-
-checkstyle {
-	ignoreFailures=false
-}
-
-//plugin configurations
-findbugs {
-	effort='max'
-	includeFilter = file("$rootProject.projectDir/config/findbugs/findbugs.xml")
-}
-
-pmd {
-	sourceSets = [sourceSets.main]
-	ruleSetFiles = files("$rootProject.projectDir/config/pmd/pmd.xml")
-}
-
-
-jacocoTestReport{
-	reports {
-		html.enabled true
-		xml.enabled true	
-	}
-		
-}
-
-if (project.hasProperty('dontFailAnalysis')) {
-	findbugs {
-		    ignoreFailures=true
-	}
-	
-	pmd {
-		ignoreFailures=true
-	}
-	checkstyle{
-		ignoreFailures =true
-	}
-}
-
