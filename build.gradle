@@ -24,3 +24,10 @@ dependencies {
     compile 'org.liquibase:liquibase-core:3.0.5'
     providedCompile 'org.apache.tomcat:tomcat-servlet-api:7.0.42'
 }
+
+sonarRunner{
+	sonarProperties {
+		property "sonar.projectKey", "spring-mvc-skeleton-gradle"
+		property "sonar.projectName", "spring-mvc-skeleton-gradle"
+	}
+}
