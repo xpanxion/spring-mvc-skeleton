@@ -13,12 +13,21 @@ import com.xpanxion.skeleton.dao.TestDao;
 import com.xpanxion.skeleton.dto.beans.TestBean;
 import com.xpanxion.skeleton.dto.entity.TestEntity;
 
+/**
+ * Implementation of the test service interface. 
+ * 
+ * @author bsmith
+ *
+ */
 @Transactional
 @Service
 public class TestServiceImpl implements TestService {
 
     private TestDao testDao;
 
+    /* (non-Javadoc)
+     * @see com.xpanxion.skeleton.service.TestService#getTestBeans()
+     */
     @Override
     public List<TestBean> getTestBeans() {
         List<TestEntity> testItems = this.testDao.getAllItems();
@@ -33,6 +42,11 @@ public class TestServiceImpl implements TestService {
         return output;
     }
 
+    /**
+     * Sets the TestDao for this service to use
+     * 
+     * @param dao the dao for this service to use. 
+     */
     @Resource
     public void setTestDao(TestDao dao) {
         this.testDao = dao;

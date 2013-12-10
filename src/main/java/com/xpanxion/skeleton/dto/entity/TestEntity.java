@@ -7,16 +7,25 @@ import javax.persistence.Id;
 import javax.persistence.NamedQuery;
 import javax.persistence.Table;
 
+/**
+ * TestEntity pojo
+ * 
+ * Represents items from the test table.  Exposes one named query that returns all entities from the table
+ * 
+ * @author bsmith
+ *
+ */
 @Entity
 @Table(name = "test")
 @NamedQuery(name = "test.getAll", query = "from TestEntity")
-public class TestEntity {
-
+public class TestEntity { 
     private long id;
     private String value;
 
     /**
-     * @return the id
+     * Returns the Id of the entity.  This is the primary key. 
+     * 
+     * @return the id of the entity
      */
     @Id
     @GeneratedValue
@@ -25,7 +34,9 @@ public class TestEntity {
     }
 
     /**
-     * @return the text
+     * Returns the entities text field
+     * 
+     * @return the text field. 
      */
     @Column
     public String getValue() {
@@ -33,6 +44,8 @@ public class TestEntity {
     }
 
     /**
+     * Sets the entity's id. 
+     * 
      * @param id
      *            the id to set
      */
@@ -41,6 +54,8 @@ public class TestEntity {
     }
 
     /**
+     * Set's the entity's text field. 
+     * 
      * @param text
      *            the text to set
      */

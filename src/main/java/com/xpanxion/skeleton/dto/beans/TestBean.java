@@ -1,5 +1,11 @@
 package com.xpanxion.skeleton.dto.beans;
 
+/**
+ * Test Bean Pojo
+ * 
+ * @author bsmith
+ *
+ */
 public class TestBean {
 
     private long id;
@@ -7,20 +13,26 @@ public class TestBean {
     private String text;
 
     /**
-     * @return the id
+     * Returns the id of this bean
+     * 
+     * @return the id the id of this bean
      */
     public long getId() {
         return this.id;
     }
 
     /**
-     * @return the text
+     * Returns the text of this bean
+     * 
+     * @return the text the text of this bean
      */
     public String getText() {
         return this.text;
     }
 
     /**
+     * Sets the id of this bean
+     * 
      * @param id
      *            the id to set
      */
@@ -29,6 +41,8 @@ public class TestBean {
     }
 
     /**
+     * Sets the text of this bean 
+     * 
      * @param text
      *            the text to set
      */
