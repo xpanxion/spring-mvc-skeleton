@@ -38,7 +38,7 @@ public class TestEntity {
      * 
      * @return the text field. 
      */
-    @Column
+    @Column(name="info")
     public String getValue() {
         return this.value;
     }

@@ -4,18 +4,20 @@
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
                       http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.0.xsd"> 
-   
-	<changeSet author="Brian Smith" id="create-test-table-with-data" dbms="mysql,postgresql,mssql,derby,h2,hsqldb">
+        
+	<changeSet author="Brian Smith" id="create-test-table-with-data-oracle" dbms="oracle">
 		<createTable tableName="test">
-			<column name="id" type="integer" autoIncrement="true">
+			<column name="id" type="integer">
 				<constraints primaryKey="true"/>
 			</column>
 			<column name="info" type="text"/>
 		</createTable>
 		<insert tableName="test">
+			<column name="id" value="1"/>
 			<column name="info" value="Test One"/>
 		</insert>
 		<insert tableName="test">
+			<column name="id" value="2"/>
 			<column name="info" value="Yep It Works"/>
 		</insert>
 	</changeSet>                    
