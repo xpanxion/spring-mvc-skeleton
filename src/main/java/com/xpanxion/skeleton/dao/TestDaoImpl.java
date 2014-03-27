@@ -26,7 +26,7 @@ public class TestDaoImpl implements TestDao {
     @Override
     @SuppressWarnings("unchecked")
     public List<TestEntity> getAllItems() {
-        return this.sessionFactory.openSession().getNamedQuery("test.getAll").list();
+        return this.sessionFactory.getCurrentSession().getNamedQuery("test.getAll").list();
     }
 
     /**
