@@ -46,7 +46,7 @@ public class TestDaoImplTest {
 
         List<TestEntity> returnList = new ArrayList<>();
 
-        given(this.factory.openSession()).willReturn(session);
+        given(this.factory.getCurrentSession()).willReturn(session);
         given(session.getNamedQuery("test.getAll")).willReturn(query);
         given(query.list()).willReturn(returnList);
         // when
